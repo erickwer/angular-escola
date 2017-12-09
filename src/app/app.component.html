@@ -1,1 +1,25 @@
-<router-outlet></router-outlet>
+<nav class="navbar fixed-top navbar-dark navbar-expand-lg " style="background-color: #a80000;">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/frequencias/cadastrar" routerLinkActive="active">Cadastro de Frequência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="frequencias/relatorio" routerLinkActive="active">Relatório de Frequências</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div id="page" class="container">
+
+    <router-outlet></router-outlet>
+
+    <hr>
+    <footer>
+        <small>Gerenciador Escolar (copyleft) 2017</small>
+    </footer>
+</div>

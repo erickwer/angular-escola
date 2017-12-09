@@ -6,8 +6,11 @@ import {AppComponent} from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from './app-routing.module';
 import {PaginaNaoEncontradaComponent} from './pagina-nao-encontrada/pagina-nao-encontrada.component';
-import {PublicoModule} from './publico/publico.module';
-import {AdminModule} from './admin/admin.module';
+import { ListaDeFrequenciasComponent } from './lista-de-frequencias/lista-de-frequencias.component';
+import { CadastroDeFrequenciasComponent } from './cadastro-de-frequencias/cadastro-de-frequencias.component';
+import {EscolaService} from './escola.service';
+import {FrequenciasService} from './frequencias.service';
+
 
 @NgModule({
   imports: [
@@ -15,16 +18,17 @@ import {AdminModule} from './admin/admin.module';
     NgbModule.forRoot(),
     FormsModule,
     HttpClientModule,
-    AdminModule,
-    PublicoModule,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    PaginaNaoEncontradaComponent
+    PaginaNaoEncontradaComponent,
+    ListaDeFrequenciasComponent,
+    CadastroDeFrequenciasComponent
   ],
   providers: [
-
+    EscolaService,
+    FrequenciasService
   ],
   bootstrap: [AppComponent]
 })
